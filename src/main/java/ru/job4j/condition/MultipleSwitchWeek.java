@@ -1,7 +1,5 @@
 package ru.job4j.condition;
 
-import ru.job4j.calculator.MathFunction;
-
 public class MultipleSwitchWeek {
     public static int numberOfDay(String name) {
         return switch (name) {
