@@ -6,16 +6,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 class MaxTest {
 
     @Test
-    void whenMax1To2Then2() {
-        int left = 1;
-        int right = 2;
-        int result = Max.max(left, right);
-        int expected = 2;
-        assertThat(result).isEqualTo(expected);
-    }
-
-    @Test
-    void whenMax3To1Then3() {
+    void maxWhen2numbers() {
         int left = 3;
         int right = 1;
         int result = Max.max(left, right);
@@ -24,11 +15,23 @@ class MaxTest {
     }
 
     @Test
-    void whenMax5To5Then5() {
-        int left = 5;
-        int right = 5;
-        int result = Max.max(left, right);
-        int expected = 5;
+    public void maxWhen3numbers() {
+        int first = 20;
+        int second = 100;
+        int third = 70;
+        int result = new Max().max(first, second, third);
+        int expected = 100;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    public void maxWhen4numbers() {
+        int first = 10;
+        int second = 20;
+        int third = 70;
+        int fourth = 40;
+        int result = new Max().max(first, second, third, fourth);
+        int expected = 70;
         assertThat(result).isEqualTo(expected);
     }
 }
