@@ -31,4 +31,13 @@ class PointTest {
         double output = a.distance(b);
         assertThat(output).isEqualTo(expected, withPrecision(0.01));
     }
+
+    @Test
+    void when023to001then2() {
+        double expected = 2;
+        Point c = new Point(0, 2, 3);
+        Point d = new Point(0, 0, 1);
+        double output = c.distance(d);
+        assertThat(output).isEqualTo(expected, withPrecision(0.01));
+    }
 }
